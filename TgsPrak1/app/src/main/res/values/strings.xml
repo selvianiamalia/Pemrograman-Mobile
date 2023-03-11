@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis quam eu volutpat interdum. Praesent tristique, neque eu porttitor interdum, magna ex bibendum ligula, at semper purus lectus nec nulla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam pulvinar ac libero in accumsan. Aenean metus libero, consectetur eget sem ac, consequat ornare dui. Morbi tempus dolor non congue hendrerit. Nullam elementum sollicitudin ex, nec pulvinar elit faucibus et.  </string>
+    <string-array name="geometry">
+        <item>Bola</item>
+        <item>Kerucut</item>
+        <item>Balok</item>
+    </string-array>
+</resources>
