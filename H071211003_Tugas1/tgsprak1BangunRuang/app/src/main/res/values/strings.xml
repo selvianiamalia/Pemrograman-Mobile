@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">tgsprak1BangunRuang</string>
+    <string-array name="geometry">
+        <item>Bola</item>
+        <item>Kerucut</item>
+        <item>Balok</item>
+    </string-array>
+</resources>
