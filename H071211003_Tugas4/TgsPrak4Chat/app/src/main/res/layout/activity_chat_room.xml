@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_room_chat"
+    tools:context=".ChatRoomActivity">
+
+    <RelativeLayout
+        android:id="@+id/profile_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openProfileDetail"
+        android:padding="10dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/buttonback"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:onClick="clickBackButton"
+            android:src="@drawable/back_icon"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/buttonback"
+            android:src="@drawable/profilcute"
+            app:civ_circle_background_color="@color/black" />
+
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:layout_toRightOf="@id/profile"
+            android:text="Selviani amalia kartika"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp">
+
+    <LinearLayout
+        android:id="@+id/llRoomChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRoomChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_bubble_chat"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chatZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/green"
+            android:padding="5dp"
+            app:cardCornerRadius="5dp"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/textchatz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Baeknya Zabil"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/timez"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="10dp"
+                    android:text="12.00"
+                    android:layout_toRightOf="@id/textchatz"
+                    android:layout_below="@id/textchatz"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
