@@ -21,7 +21,7 @@ public class ChatRoomActivity extends AppCompatActivity {
     private ActivityChatRoomBinding binding;
     private ActivityMainBinding mainBinding;
     private ArrayList<Chat> chatArrayList = new ArrayList<>();
-    private TextView tv_nama, tv_status, tv_notelp, tv_lastseen, tv_textchatz, tv_timez;
+    private TextView tv_nama, tv_status, tv_notelp, tv_lastseen, tv_lastchat, tv_lasttime;
     private ImageView iv_backicon;
     private CircleImageView iv_profile;
     String nama, notelp, lastseen, status;
@@ -40,8 +40,8 @@ public class ChatRoomActivity extends AppCompatActivity {
         tv_notelp = findViewById(R.id.notelp);
         tv_status = findViewById(R.id.status);
         iv_backicon = findViewById(R.id.backbutton);
-        tv_textchatz = findViewById(R.id.textchatz);
-        tv_timez = findViewById(R.id.timez);
+        tv_lastchat = findViewById(R.id.tv_last);
+        tv_lasttime = findViewById(R.id.timelast);
 
         Intent intent = getIntent();
         nama = intent.getStringExtra("varNama");
@@ -53,8 +53,8 @@ public class ChatRoomActivity extends AppCompatActivity {
         String time = intent.getStringExtra("varTime");
 
         tv_nama.setText(nama);
-        tv_textchatz.setText(chat);
-        tv_timez.setText(time);
+        tv_lastchat.setText(chat);
+        tv_lasttime.setText(time);
         System.out.println(chat);
         System.out.println(time);
         iv_profile.setImageResource(profile);

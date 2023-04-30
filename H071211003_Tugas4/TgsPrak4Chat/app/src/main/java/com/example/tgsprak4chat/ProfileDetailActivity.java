@@ -47,6 +47,7 @@ public class ProfileDetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent profil = new Intent(ProfileDetailActivity.this, ProfileActivity.class);
                 profil.putExtra("profile", profile);
+                profil.putExtra("varNama", name);
                 startActivity(profil);
             }
         });

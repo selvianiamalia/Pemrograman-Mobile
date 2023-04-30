@@ -37,6 +37,20 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.onBind(chats.get(position));
+
+        holder.binding.profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int viewProfile = chats.get(holder.getAdapterPosition()).getProfile();
+                String name = chats.get(holder.getAdapterPosition()).getName();
+
+                Intent intent = new Intent(holder.binding.profile.getContext(), ProfileActivity.class);
+                intent.putExtra("profile", viewProfile);
+                intent.putExtra("varNama", name);
+                holder.binding.profile.getContext().startActivity(intent);
+            }
+        });
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
